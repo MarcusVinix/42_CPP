@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:09:15 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/18 18:56:40 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/03/18 19:06:38 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ void	Account::_displayTimestamp( void ) {
 	date = localtime(&timer);
 	std::cout.fill('0');
 	std::cout << date->tm_year + 1900
-		<< std::setw(2) << date->tm_mon
+		<< std::setw(2) << date->tm_mon + 1
 		<< std::setw(2) << date->tm_mday
 		<< "_"
 		<< std::setw(2) << date->tm_hour
