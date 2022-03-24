@@ -3,6 +3,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 NAME = megaphone
 
+all: $(NAME)
+
 compile:
 	$(CC) $(CFLAGS) -o $(NAME) megaphone.cpp
 

@@ -5,6 +5,8 @@ NAME = account
 
 FILES = Account.cpp tests.cpp
 
+all: $(NAME)
+
 compile:
 	$(CC) $(CFLAGS) -I . -o $(NAME) $(FILES)
 

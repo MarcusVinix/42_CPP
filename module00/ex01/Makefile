@@ -5,6 +5,8 @@ NAME = phoneBook
 
 FILES = ClassContact.cpp ClassPhoneBook.cpp main.cpp
 
+all: $(NAME)
+
 compile:
 	$(CC) $(CFLAGS) -o $(NAME) $(FILES)
 
