@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 16:28:42 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/22 19:14:03 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/03/31 10:53:58 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ bool openInAndOut(std::ifstream &in, std::ofstream &out, std::string file) {
 		return (false);
 	}
 	file.append(".replace");
-	out.open(file.c_str(), std::ofstream::out);
+	out.open(file.c_str(), std::ofstream::out | std::ofstream::trunc);
 	if (!out.is_open())
 	{
 		std::cout << "Something wrong creating the new file" << std::endl;
