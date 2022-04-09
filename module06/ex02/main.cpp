@@ -6,14 +6,13 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 17:58:31 by mavinici          #+#    #+#             */
-/*   Updated: 2022/04/01 18:11:20 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/08 08:56:18 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
 
 Base*	generate( void ) {
-	srand(time(NULL));
 	int	num = std::rand() % 3;
 
 	if (num == 0)
@@ -54,6 +53,7 @@ void	identify( Base &p ) {
 }
 
 int	main( void ) {
+	srand(time(NULL));
 	{
 		Base *base = generate();
 		std::cout << "First test with dynamic casting" << std::endl;
@@ -70,6 +70,12 @@ int	main( void ) {
 
 		delete base;
 	}
-
+	{
+		Base *base = generate();
+		std::cout << "Second test with dynamic casting" << std::endl;
+		std::cout << "Base *p is:  ";
+		identify(base);
+		delete base;
+	}
 	return ( 0 );
 }

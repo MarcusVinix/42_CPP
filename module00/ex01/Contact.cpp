@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassContact.cpp                                   :+:      :+:    :+:   */
+/*   Contact.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,17 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClassContact.hpp"
+#include "Contact.hpp"
 
-ClassContact::ClassContact(void) {
+Contact::Contact(void) {
 	return ;
 }
 
-ClassContact::~ClassContact(void) {
+Contact::~Contact(void) {
 	return ;
 }
 
-void	ClassContact::setFirstName() {
+void	Contact::setFirstName() {
 	std::string	name;
 
 	while (true)
@@ -36,7 +36,7 @@ void	ClassContact::setFirstName() {
 	name.clear();
 }
 
-void	ClassContact::setLastName() {
+void	Contact::setLastName() {
 	std::string lastName;
 
 	while (true)
@@ -52,7 +52,7 @@ void	ClassContact::setLastName() {
 	lastName.clear();
 }
 
-void	ClassContact::setPhoneNumber() {
+void	Contact::setPhoneNumber() {
 	std::string	number;
 
 	while (true)
@@ -68,7 +68,7 @@ void	ClassContact::setPhoneNumber() {
 	number.clear();
 }
 
-void	ClassContact::setDarkestSecret() {
+void	Contact::setDarkestSecret() {
 	std::string secret;
 
 	while (true)
@@ -84,7 +84,7 @@ void	ClassContact::setDarkestSecret() {
 	secret.clear();
 }
 
-void	ClassContact::setNickname() {
+void	Contact::setNickname() {
 	std::string nickName;
 
 	while (true)
@@ -100,7 +100,7 @@ void	ClassContact::setNickname() {
 	nickName.clear();
 }
 
-bool	ClassContact::isOnlyAlpha(std::string str) {
+bool	Contact::isOnlyAlpha(std::string str) {
 	int	j = 0;
 
 	for (int i = 0; str[i]; i++) {
@@ -117,7 +117,7 @@ bool	ClassContact::isOnlyAlpha(std::string str) {
 		return (false);
 }
 
-bool	ClassContact::isOnlyDigit(std::string str) {
+bool	Contact::isOnlyDigit(std::string str) {
 	for (int i = 0; str[i]; i++) {
 		if (!isdigit(str[i]))
 			return (false);
@@ -125,7 +125,7 @@ bool	ClassContact::isOnlyDigit(std::string str) {
 	return (true);
 }
 
-std::string	ClassContact::resizeAtributteToPrint(std::string str) {
+std::string	Contact::resizeAtributteToPrint(std::string str) {
 	std::string	newStr;
 	if (str.length() > 10)
 	{
@@ -137,7 +137,7 @@ std::string	ClassContact::resizeAtributteToPrint(std::string str) {
 }
 
 
-void	ClassContact::printHeader()  {
+void	Contact::printHeader()  {
 	std::cout << std::right <<
 		'|' << std::setw(10) << "index" <<
 		'|' << std::setw(10) << "FirstName" <<
@@ -145,7 +145,7 @@ void	ClassContact::printHeader()  {
 		'|' << std::setw(10) << "Nickname" << "|" << std::endl;
 }
 
-void	ClassContact::printContact() {
+void	Contact::printContact() {
 	std::cout <<
 		"|" << std::setw(10) << this->index <<
 		"|" << std::setw(10) << resizeAtributteToPrint(this->_firstName) <<
@@ -153,19 +153,13 @@ void	ClassContact::printContact() {
 		"|" << std::setw(10) << resizeAtributteToPrint(this->_nickname) << "|" << std::endl;
 }
 
-void	ClassContact::printContactFull() {
-	std::cout << std::right <<
-		'|' << std::setw(10) << "index" <<
-		'|' << std::setw(10) << "FirstName" <<
-		'|' << std::setw(10) << "LastName" <<
-		'|' << std::setw(10) << "Nickname" <<
-		'|' << std::setw(10) << "Number" <<
-		'|' << std::setw(10) << "Darkest" << "|" << std::endl;
-	std::cout <<
-		"|" << std::setw(10) << this->index <<
-		"|" << std::setw(10) << resizeAtributteToPrint(this->_firstName) <<
-		"|" << std::setw(10) << resizeAtributteToPrint(this->_lastName) <<
-		"|" << std::setw(10) << resizeAtributteToPrint(this->_nickname) <<
-		"|" << std::setw(10) << resizeAtributteToPrint(this->_phoneNumber) <<
-		"|" << std::setw(10) << resizeAtributteToPrint(this->_darkestSecret) << "|" << std::endl;
+void	Contact::printContactFull() {
+	std::cout << "************************************************************" << std::endl;
+	std::cout << "Index: " << this->index << std::endl;
+	std::cout << "FirstName: " << this->_firstName << std::endl;
+	std::cout << "LastName: " << this->_lastName << std::endl;
+	std::cout << "NickName: " << this->_nickname << std::endl;
+	std::cout << "Number: " << this->_phoneNumber << std::endl;
+	std::cout << "Darkest: " << this->_darkestSecret << std::endl;
+	std::cout << "************************************************************" << std::endl;
 }

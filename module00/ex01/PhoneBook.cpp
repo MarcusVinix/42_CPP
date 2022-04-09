@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassPhoneBook.cpp                                 :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "ClassPhoneBook.hpp"
+#include "PhoneBook.hpp"
 
-ClassPhoneBook::ClassPhoneBook(void) {
+PhoneBook::PhoneBook(void) {
 	std::cout << "Welcome to PhoneBook!" << std::endl;
 	std::cout << "Options available: " << std::endl;
 	std::cout << "ADD: save a new contact." << std::endl;
@@ -25,14 +25,14 @@ ClassPhoneBook::ClassPhoneBook(void) {
 	return ;
 }
 
-ClassPhoneBook::~ClassPhoneBook(void) {
+PhoneBook::~PhoneBook(void) {
 	std::cout << "Thanks for using!" << std::endl;
 	std::cout << "See ya!" << std::endl;
 	return ;
 }
 
 
-void			ClassPhoneBook::setNewContact() {
+void			PhoneBook::setNewContact() {
 	int	id;
 
 	id = this->_currentId;
@@ -47,26 +47,26 @@ void			ClassPhoneBook::setNewContact() {
 		this->total++;
 }
 
-void		ClassPhoneBook::setCurrentId(int id) {
+void		PhoneBook::setCurrentId(int id) {
 	if (this->_currentId == 7)
 		this->_currentId = 0;
 	else
 		this->_currentId += id;
 }
 
-void		ClassPhoneBook::printAllContacts() {
+void		PhoneBook::printAllContacts() {
 	this->_contacts[0].printHeader();
 	for (int i = 0; i < this->total; i++)
 		this->_contacts[i].printContact();
 }
 
-void		ClassPhoneBook::searchContacts() {
+void		PhoneBook::searchContacts() {
 	std::string	i;
 	int			id;
 	char 		str[500];
 
 	std::cout << "All contacts: " << std::endl;
-	ClassPhoneBook::printAllContacts();
+	PhoneBook::printAllContacts();
 	do {
 		std::cout << "index: ";
 		std::getline(std::cin, i);

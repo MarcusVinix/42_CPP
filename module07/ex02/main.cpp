@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 23:08:03 by mavinici          #+#    #+#             */
-/*   Updated: 2022/04/03 23:17:48 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/08 13:03:04 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,22 @@ int main(int, char**)
 		const int value = rand();
 		numbers[i] = value;
 		mirror[i] = value;
+	}
+	{
+		std::cout << "*****************************************************" << std::endl;
+		std::cout << "Values of original array" << std::endl;
+		for ( int i = 0; i < 5; i++)
+			std::cout << ' ' << mirror[i];
+		std::cout << std::endl;
+		std::cout << "*****************************************************" << std::endl;
+		
+		std::cout << "Values of my array" << std::endl;
+		for ( int i = 0; i < 5; i++)
+			std::cout << ' ' << numbers[i];
+		std::cout << std::endl;
+		std::cout << "*****************************************************" << std::endl;
+
+
 	}
 	//SCOPE
 	{
@@ -62,5 +78,10 @@ int main(int, char**)
 		numbers[i] = rand();
 	}
 	delete [] mirror;//
+	{
+		int * a = new int();
+		std::cout << "teste do pdf = " << *a << std::endl;
+		delete a;
+	}
 	return 0;
 }

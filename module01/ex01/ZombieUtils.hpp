@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 12:04:41 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/22 12:06:31 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/06 08:38:49 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class ZombieUtils {
 
 public:
 
-	Zombie* zombieHordede( int N, std::string name );
+	Zombie* zombieHorde( int N, std::string name );
 
 };
 

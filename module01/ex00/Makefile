@@ -7,7 +7,7 @@ FILES = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 all: $(NAME)
 
-compile:
+$(NAME):
 	$(CC) $(CFLAGS) -o $(NAME) $(FILES)
 
 run:

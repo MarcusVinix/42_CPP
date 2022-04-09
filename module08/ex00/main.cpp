@@ -5,24 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 12:13:47 by mavinici          #+#    #+#             */
-/*   Updated: 2022/04/06 08:40:21 by mavinici         ###   ########.fr       */
+/*   Created: 2022/04/05 15:33:36 by mavinici          #+#    #+#             */
+/*   Updated: 2022/04/08 09:24:38 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ZombieUtils.hpp"
+#include "easyfind.hpp"
+#include <vector>
 
 int	main( void ) {
-	ZombieUtils	utils;
-	Zombie		*zombies;
-
-	utils = ZombieUtils();
-	zombies = utils.zombieHorde(9, "YEAh!");
-	for (int i = 0; i < 9; i++)
 	{
-		std::cout << i + 1 << " ";
-		zombies[i].announce();
+		int myArray[5] = { 5, 10, 15, 20, 25 };
+		std::vector<int> vec(myArray, myArray + sizeof(myArray) / sizeof(int) );
+		std::cout << "Number: " << *easyfind( vec, 5) << std::endl;
 	}
-	delete [] zombies;
-	return (0);
+	{
+		std::vector<int> myVector ( 10 );
+		std::vector<int>::size_type n = myVector.size();
+
+		for (unsigned i = 0; i < n; i++) myVector[i] = i;
+		std::cout << std::endl;
+		for (unsigned i = 0; i < n; i++)
+			std::cout << ' ' << myVector[i];
+		std::cout << std::endl;
+		std::cout << "Number: " << *easyfind( myVector, 8 ) << std::endl;
+
+	}
+	return ( 0 );
 }

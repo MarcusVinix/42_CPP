@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassContact.hpp                                   :+:      :+:    :+:   */
+/*   Contact.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,18 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_CONTACT_HPP
-# define CLASS_CONTACT_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 #include <string>
 #include <iostream>
 #include <iomanip>
 
-class ClassContact {
+class Contact {
 public:
 
-	ClassContact( void );
-	~ClassContact( void );
+	Contact( void );
+	~Contact( void );
 
 	void		printContact();
 	std::string	resizeAtributteToPrint(std::string str);

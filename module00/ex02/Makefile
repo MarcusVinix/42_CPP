@@ -7,7 +7,7 @@ FILES = Account.cpp tests.cpp
 
 all: $(NAME)
 
-compile:
+$(NAME):
 	$(CC) $(CFLAGS) -I . -o $(NAME) $(FILES)
 
 run:

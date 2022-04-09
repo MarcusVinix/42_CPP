@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 11:30:15 by mavinici          #+#    #+#             */
-/*   Updated: 2022/04/09 11:50:38 by mavinici         ###   ########.fr       */
+/*   Created: 2022/03/15 15:40:38 by mavinici          #+#    #+#             */
+/*   Updated: 2022/03/18 13:14:35 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef PHONE_BOOK_HPP
+# define PHONE_BOOK_HPP
 
-Zombie::Zombie( void ) { 
-	return ;
-}
+#include "Contact.hpp"
+#include <stdlib.h>
+#include <string>
+#include <iostream>
+#include <iomanip>
 
-Zombie::~Zombie( void ) {
-	std::cout << this->_name << " Bye!" << std::endl;
-	return ;
-}
+class PhoneBook {
+public:
 
-void	Zombie::setName( std::string name ) {
-	this->_name = name;
-}
+	PhoneBook( void );
+	~PhoneBook( void );
 
-void	Zombie::announce( void ) {
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+	void			printAllContacts();
+	void			searchContacts();
+	void			setNewContact();
+	void			setCurrentId(int id);
+
+	int				total;
+
+private:
+
+	Contact			_contacts[8];
+	int				_currentId;
+};
+
+#endif

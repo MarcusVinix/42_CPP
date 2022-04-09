@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:37:06 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/31 11:42:13 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/09 11:47:49 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ Form::Form( Form const & rhs )
 Form & Form::operator=( Form const & rhs ) {
 	std::cout << "copy operator Form called" << std::endl;
 	this->_signed = rhs.getSigned();
-	*this = rhs;
 	return ( *this );
 }
 

@@ -26,11 +26,11 @@ int main( void ) {
 	Fixed e( 5 );
 	Fixed f( 5 );
 	Fixed g( 10 );
-	std::cout << "expected: true " << (e == f)  << std::endl;
-	std::cout << "expected: false " << (e != f)  << std::endl;
+	std::cout << std::boolalpha << "expected: true " << (e == f)  << std::endl;
+	std::cout << std::boolalpha << "expected: false " << (e != f)  << std::endl;
 
-	std::cout << "expected: false " << (e > g)  << std::endl;
-	std::cout << "expected: true " << (e < g)  << std::endl;
+	std::cout << std::boolalpha << "expected: false " << (e > g)  << std::endl;
+	std::cout << std::boolalpha << "expected: true " << (e < g)  << std::endl;
 
 	std::cout << "expected: min 5:  " << Fixed::min(10, 5) << std::endl;
 

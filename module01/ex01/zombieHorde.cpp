@@ -6,13 +6,13 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 12:09:58 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/22 12:20:06 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/06 08:38:56 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieUtils.hpp"
 
-Zombie* ZombieUtils::zombieHordede( int N, std::string name ) {
+Zombie* ZombieUtils::zombieHorde( int N, std::string name ) {
 	Zombie* zombie;
 
 	zombie = new Zombie[N];

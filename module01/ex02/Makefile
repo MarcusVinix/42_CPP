@@ -7,7 +7,7 @@ FILES = main.cpp
 
 all: $(NAME)
 
-compile:
+$(NAME):
 	$(CC) $(CFLAGS) -o $(NAME) $(FILES)
 
 run:

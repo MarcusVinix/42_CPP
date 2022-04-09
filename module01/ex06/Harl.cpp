@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 09:25:24 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/31 16:27:31 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/06 08:55:54 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,4 @@ void	Harl::complain( std::string level ) {
 	while (i < 4 && levels[i] != level)
 		i++;
 	this->_levelAndAbove(i);
-	
 }

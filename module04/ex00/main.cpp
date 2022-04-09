@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 10:56:12 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/28 11:26:57 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/07 09:03:45 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main( void )
 	delete meta;
 	delete j;
 	delete i;
+	std::cout << std::endl;
 	std::cout << "WRONG ONE:" << std::endl;
 	const WrongAnimal* wrong1 = new WrongAnimal();
 	const WrongAnimal* wrong2 = new WrongCat();

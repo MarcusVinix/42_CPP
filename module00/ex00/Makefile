@@ -5,7 +5,7 @@ NAME = megaphone
 
 all: $(NAME)
 
-compile:
+$(NAME):
 	$(CC) $(CFLAGS) -o $(NAME) megaphone.cpp
 
 run:

@@ -6,18 +6,18 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 15:38:26 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/18 13:08:58 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/05 18:07:42 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstring>
-#include "ClassContact.hpp"
-#include "ClassPhoneBook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int	main(void) {
 	std::string option;
-	ClassPhoneBook phoneBook;
+	PhoneBook phoneBook;
 
 	do
 	{

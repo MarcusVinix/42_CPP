@@ -3,11 +3,11 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 RM = rm -rf
 NAME = phoneBook
 
-FILES = ClassContact.cpp ClassPhoneBook.cpp main.cpp
+FILES = Contact.cpp PhoneBook.cpp main.cpp
 
 all: $(NAME)
 
-compile:
+$(NAME):
 	$(CC) $(CFLAGS) -o $(NAME) $(FILES)
 
 run:

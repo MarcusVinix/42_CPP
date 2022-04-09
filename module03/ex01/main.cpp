@@ -6,7 +6,7 @@
 /*   By: mavinici <mavinici@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 23:09:17 by mavinici          #+#    #+#             */
-/*   Updated: 2022/03/25 12:21:01 by mavinici         ###   ########.fr       */
+/*   Updated: 2022/04/06 16:32:06 by mavinici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	main( void ) {
 	art.beRepaired( 3 );
 	art.guardGate( );
 	art.takeDamage( 50 );
-	art.guardGate( );
-
 
 	return ( 0 );
 }
